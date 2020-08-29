@@ -1,6 +1,6 @@
 from os import environ
 
-from flask import Flask
+from flask import Flask, jsonify
 
 # NOTE(decentral1se): some black magic to get the RPI happy
 environ["DISPLAY"] = ":0"
@@ -14,8 +14,8 @@ app = Flask(__name__)
 @app.route("/")
 def _click():
     click()
-    return "clicked"
+    return jsonify(success=True)
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    app.run(debug=False, host="0.0.0.0")
