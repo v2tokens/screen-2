@@ -1,0 +1,29 @@
+body { 
+	position: relative;
+	margin: 0px; }
+
+canvas { position: absolute; }
+
+img{ 
+	width: 500px;
+	visibility: hidden; 
+	position: absolute;
+}
+
+video{ 
+	width: 600px;
+	visibility: hidden; 
+	position: absolute;
+}
+
+#img-1 { z-index: 1; }
+#img-2 { z-index: 2; }
+#img-3 { z-index: 3; }
+#img-4 { z-index: 4; }
+#img-5 { z-index: 5; }
+#img-6 { z-index: 6; }
+#img-7 { z-index: 7; }
+#img-8 { z-index: 8; }
+#img-9 { z-index: 9; }
+#img-10 { z-index: 10; }
+#videoDefault{ z-index: 11; }
