@@ -11,7 +11,7 @@ var cheight = 800, cheighthalf = cheight / 18;
 
 var particles = [];
 
-var Particle = function ( x, y, sx, sy ) {
+var Particle = function ( coin ,x, y, sx, sy ) {
 
 	if ( sx === 0 ) sx = 2;
 
@@ -32,7 +32,7 @@ var Particle = function ( x, y, sx, sy ) {
 
 		sy += 0.98;
 
-		context.drawImage( image, 0, 0, cwidth*5, cheight*5, Math.floor( x - cwidthhalf ), Math.floor( y - cheighthalf ), cwidth/4, cheight/4	);
+		context.drawImage( coin, 0, 0, cwidth*5, cheight*5, Math.floor( x - cwidthhalf ), Math.floor( y - cheighthalf ), cwidth/4, cheight/4	);
 
 		return true;
 
@@ -40,14 +40,27 @@ var Particle = function ( x, y, sx, sy ) {
 
 }
 
-var image = document.createElement( 'img' );
-image.src = "token.png";
+var image1 = document.createElement( 'img' );
+var image2 = document.createElement( 'img' );
+var image3 = document.createElement( 'img' );
+image1.src = "./assets/images/token_1.png";
+image2.src = "./assets/images/token_2.png";
+image3.src = "./assets/images/token_3.png";
 
 var throwCard = function ( x, y ) {
 
-	var particle = new Particle( x, y, Math.floor( Math.random() * 6 - 3 ) * 2, - Math.random() * 16 );
-	particles.push( particle );
+	var particle1 = new Particle( image1 ,x, y, Math.floor( Math.random() * 6 - 3 ) * 2, - Math.random() * 16 );
+	particles.push( particle1 );
 
+	var particle2_2 = new Particle( image2 ,x, y, Math.floor( Math.random() * 6 - 3 ) * 2, - Math.random() * 16 );
+	particles.push( particle2_2 );
+	var particle2 = new Particle( image2 ,x, y, Math.floor( Math.random() * 6 - 3 ) * 2, - Math.random() * 16 );
+	particles.push( particle2 );
+
+	var particle3 = new Particle( image3 ,x, y, Math.floor( Math.random() * 6 - 3 ) * 2, - Math.random() * 16 );
+	particles.push( particle3 );
+	var particle3_3 = new Particle( image3 ,x, y, Math.floor( Math.random() * 6 - 3 ) * 2, - Math.random() * 16 );
+	particles.push( particle3_3 );
 }
 
 document.addEventListener( 'mousedown', function ( event ) {
