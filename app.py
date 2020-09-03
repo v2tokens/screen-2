@@ -11,6 +11,11 @@ from pyautogui import click
 app = Flask(__name__)
 
 
+@app.route("/ok")
+def isup():
+    return jsonify(success=True)
+
+
 @app.route("/")
 def _click():
     click()
