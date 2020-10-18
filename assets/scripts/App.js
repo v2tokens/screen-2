@@ -39,7 +39,7 @@ function make_visible(){
 		if (counter == 29){
 			setTimeout(function(){
 
-				$('img').css('visibility', 'hidden');
+				$('.posts').css('visibility', 'hidden');
 				$('video').css('visibility', 'hidden');
 				reset_counter();
 

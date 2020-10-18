@@ -16,6 +16,39 @@ video{
 	position: absolute;
 }
 
+ul {
+	list-style: none;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	padding:0px;
+	margin: 5px;
+}
+
 #img-9 { width: 530px; }
 #img-13 { width: 600px; }
 #img-30 { width: 530px; }
+
+#pieChart {
+	background-color: #ffffff9c;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 101;
+	box-shadow: 5px 5px 5px #00000070;
+}
+
+#pieImg {
+	visibility: visible;
+	width: 100px;}
+
+.squareColor{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+}
+
+#performers { background-color: #544596; }
+#platform { background-color: #f49817; }
+#payment { background-color: #cc679a; }
+
+.percentages { font-size: 12px; }
